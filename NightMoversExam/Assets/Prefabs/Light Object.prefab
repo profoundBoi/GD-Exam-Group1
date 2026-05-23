@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5962669464301161161}
   - component: {fileID: 6749853777867110643}
   - component: {fileID: 3890299335368912405}
+  - component: {fileID: 3573780921724257601}
   m_Layer: 3
   m_Name: Light Object
   m_TagString: Untagged
@@ -154,6 +155,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectweightManager
   isHeavyObject: 0
-  isNormalObject: 0
+  isNormalObject: 1
   canBePickedUp: 0
   playerHoldingPosition: []
+--- !u!114 &3573780921724257601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663849109634381441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2904f43b4e85c814b9e3975b3da825f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProximityUI
+  isHeavy: 0
+  detectionRadius: 4
+  playerTag: Player
+  uiCanvas: {fileID: 0}
+  lightIcon: {fileID: 0}
+  heavyIcon1: {fileID: 0}
+  heavyIcon2: {fileID: 0}
