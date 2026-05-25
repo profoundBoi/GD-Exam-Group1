@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class ValuableObject : MonoBehaviour
 {
@@ -7,18 +8,19 @@ public class ValuableObject : MonoBehaviour
     public int maxValue = 100;
 
     [Range(0.5f, 2f)]
-    [Tooltip("Higher = more fragile")]
     public float fragilityMultiplier = 1f;
 
     [Header("Durability")]
     public float maxDurability = 100f;
     private float currentDurability;
 
+    [Header("Value UI")]
+    public TMP_Text valueText;
+
     [Header("Collision Thresholds")]
-    public float grazeThreshold = 2f;   // T1
-    public float bumpThreshold = 5f;    // T2
-    public float impactThreshold = 10f; // T3
-    // Above 10 = T4
+    public float grazeThreshold = 2f;
+    public float bumpThreshold = 5f;
+    public float impactThreshold = 10f;
 
     [Header("Damage Amounts")]
     public float t2Damage = 5f;
@@ -36,8 +38,9 @@ public class ValuableObject : MonoBehaviour
         currentDurability = maxDurability;
         currentValue = maxValue;
 
-        // Add starting value to total money
         MoneyManager.Instance.AddMoney(maxValue);
+
+        UpdateValueUI();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -46,12 +49,10 @@ public class ValuableObject : MonoBehaviour
 
         float velocity = collision.relativeVelocity.magnitude;
 
-        // Apply fragility multiplier
         float adjustedVelocity = velocity * fragilityMultiplier;
 
         DamageTier tier = GetDamageTier(adjustedVelocity);
 
-        // T1 = no real damage
         if (tier == DamageTier.T1_Graze)
             return;
 
@@ -61,21 +62,15 @@ public class ValuableObject : MonoBehaviour
     DamageTier GetDamageTier(float velocity)
     {
         if (velocity < grazeThreshold)
-        {
             return DamageTier.T1_Graze;
-        }
-        else if (velocity < bumpThreshold)
-        {
+
+        if (velocity < bumpThreshold)
             return DamageTier.T2_Bump;
-        }
-        else if (velocity < impactThreshold)
-        {
+
+        if (velocity < impactThreshold)
             return DamageTier.T3_Impact;
-        }
-        else
-        {
-            return DamageTier.T4_Severe;
-        }
+
+        return DamageTier.T4_Severe;
     }
 
     void ApplyTierDamage(DamageTier tier)
@@ -86,25 +81,20 @@ public class ValuableObject : MonoBehaviour
         {
             case DamageTier.T2_Bump:
                 damage = t2Damage;
-                Debug.Log(objectName + " suffered a BUMP.");
                 break;
 
             case DamageTier.T3_Impact:
                 damage = t3Damage;
-                Debug.Log(objectName + " suffered an IMPACT.");
                 break;
 
             case DamageTier.T4_Severe:
                 damage = t4Damage;
-                Debug.Log(objectName + " suffered SEVERE damage.");
                 break;
         }
 
         currentDurability -= damage;
-
         currentDurability = Mathf.Clamp(currentDurability, 0f, maxDurability);
 
-        // Recalculate object value
         float durabilityPercent = currentDurability / maxDurability;
 
         int newValue = Mathf.RoundToInt(maxValue * durabilityPercent);
@@ -118,12 +108,19 @@ public class ValuableObject : MonoBehaviour
 
         currentValue = newValue;
 
-        Debug.Log(objectName + " value is now: " + currentValue);
+        UpdateValueUI();
 
-        // Break object
         if (currentDurability <= 0)
         {
             BreakObject();
+        }
+    }
+
+    void UpdateValueUI()
+    {
+        if (valueText != null)
+        {
+            valueText.text = "R" + currentValue;
         }
     }
 
@@ -131,21 +128,21 @@ public class ValuableObject : MonoBehaviour
     {
         isBroken = true;
 
-        // Remove remaining value
         if (currentValue > 0)
         {
             MoneyManager.Instance.RemoveMoney(currentValue);
         }
 
-        Debug.Log(objectName + " BROKE!");
-
-        // Hide renderers
         foreach (Renderer r in GetComponentsInChildren<Renderer>())
         {
             r.enabled = false;
         }
 
-        // Spawn break effect
+        if (valueText != null)
+        {
+            valueText.gameObject.SetActive(false);
+        }
+
         if (breakEffect != null)
         {
             GameObject fx = Instantiate(
@@ -157,13 +154,7 @@ public class ValuableObject : MonoBehaviour
             Destroy(fx, 3f);
         }
 
-        // Disable object after breaking
         Destroy(gameObject, 0.2f);
-    }
-
-    public int GetCurrentValue()
-    {
-        return currentValue;
     }
 
     enum DamageTier

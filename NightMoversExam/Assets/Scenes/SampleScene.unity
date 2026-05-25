@@ -858,10 +858,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 663849109634381441, guid: 1ec265a08253df440b461bc52875e93d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1621614724}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ec265a08253df440b461bc52875e93d, type: 3}
 --- !u!1 &1431977721
 GameObject:
@@ -895,34 +892,6 @@ Transform:
   - {fileID: 1359154812}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1621614715 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 663849109634381441, guid: 1ec265a08253df440b461bc52875e93d, type: 3}
-  m_PrefabInstance: {fileID: 1376721737}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1621614724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621614715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9c467d83f76af2409e1488952a2c7ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ValuableObject
-  objectName: Valuable
-  maxValue: 100
-  fragilityMultiplier: 1
-  maxDurability: 100
-  grazeThreshold: 2
-  bumpThreshold: 5
-  impactThreshold: 10
-  t2Damage: 5
-  t3Damage: 15
-  t4Damage: 35
-  breakEffect: {fileID: 0}
 --- !u!1 &1873391150
 GameObject:
   m_ObjectHideFlags: 0
