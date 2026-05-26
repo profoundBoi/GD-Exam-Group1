@@ -22,7 +22,6 @@ public class DeliveryZone : MonoBehaviour
 
     private void Start()
     {
-        // Hide all checklist images at start
         foreach (DeliveryItem item in deliveryItems)
         {
             if (item.uiImage != null)
@@ -36,11 +35,9 @@ public class DeliveryZone : MonoBehaviour
     {
         foreach (DeliveryItem item in deliveryItems)
         {
-            // Prevent duplicate deposits
             if (depositedTags.Contains(item.objectTag))
                 continue;
 
-            // Check matching tag
             if (other.CompareTag(item.objectTag))
             {
                 DepositObject(item, other.gameObject);
@@ -53,13 +50,11 @@ public class DeliveryZone : MonoBehaviour
     {
         depositedTags.Add(item.objectTag);
 
-        // Activate UI image
         if (item.uiImage != null)
         {
             item.uiImage.gameObject.SetActive(true);
         }
 
-        // Optional effects
         if (depositEffect != null)
         {
             Instantiate(depositEffect, obj.transform.position, Quaternion.identity);
@@ -70,7 +65,6 @@ public class DeliveryZone : MonoBehaviour
             depositSound.Play();
         }
 
-        // Disable object after delivery
         obj.SetActive(false);
 
         Debug.Log(obj.name + " deposited!");

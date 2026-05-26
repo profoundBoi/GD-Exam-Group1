@@ -1356,7 +1356,6 @@ GameObject:
   - component: {fileID: 1759512494}
   - component: {fileID: 1759512493}
   - component: {fileID: 1759512492}
-  - component: {fileID: 1759512496}
   - component: {fileID: 1759512497}
   m_Layer: 0
   m_Name: DeliveryZone
@@ -1393,7 +1392,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759512491}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1411,7 +1410,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 140505200a227764ab0d8e1d0e47348d, type: 2}
+  - {fileID: 2100000, guid: b08e96a2be5832d44829cbfcf68cdb5c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1462,22 +1461,6 @@ Transform:
   - {fileID: 870673592}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1759512496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759512491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81669d9446050ea4d8c4c65bf0d80742, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GlowZoneVisual
-  glowMaterial: {fileID: 2100000, guid: b08e96a2be5832d44829cbfcf68cdb5c, type: 2}
-  pulseSpeed: 2
-  minEmission: 1
-  maxEmission: 5
 --- !u!114 &1759512497
 MonoBehaviour:
   m_ObjectHideFlags: 0
