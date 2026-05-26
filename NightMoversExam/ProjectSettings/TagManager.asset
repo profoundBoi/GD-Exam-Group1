@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WayPoint2
   - CarrySpot
+  - Test01
   layers:
   - Default
   - TransparentFX
