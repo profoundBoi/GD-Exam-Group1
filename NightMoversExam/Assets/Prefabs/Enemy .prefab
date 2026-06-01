@@ -302,6 +302,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 53c47a54ffac9674cb1da55d55ae6e2c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4970017136482415627}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 53c47a54ffac9674cb1da55d55ae6e2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4971340462883459340}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 53c47a54ffac9674cb1da55d55ae6e2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4976827023282709170}
   m_SourcePrefab: {fileID: 100100000, guid: 53c47a54ffac9674cb1da55d55ae6e2c, type: 3}
 --- !u!1 &1466417620661319287 stripped
 GameObject:
@@ -346,3 +352,47 @@ MonoBehaviour:
   - Stand
   - Screem
   - Run
+--- !u!195 &4971340462883459340
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466417620661319287}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &4976827023282709170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466417620661319287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a61515971652aec47a2365d0969ba598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeddyBear
+  detectionRange: 20
+  explodeRange: 10
+  explosionDelay: 1
+  explosionRadius: 10
+  damage: 50
+  damageLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  explosionEffect: {fileID: 0}
+  playerTag: Player

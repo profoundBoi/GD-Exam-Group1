@@ -20,14 +20,24 @@ public class TeddyBear : MonoBehaviour
     [Tooltip("Tag used to locate the player. Must match the Player GameObject's tag.")]
     public string playerTag = "Player";
 
+    [Header("Animation")]
+    public float chaseDelay = 2f; // Should match animationBools[0] clip length
+
     private NavMeshAgent agent;
     private bool isExploding = false;
+    private bool hasActivated = false;
+    private bool canChase = false;
     private Transform player;
+    private BearAnimationManager animManager;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.stoppingDistance = explodeRange * 0.9f;
+
+        animManager = GetComponent<BearAnimationManager>();
+        if (animManager == null)
+            Debug.LogWarning("TeddyBear: No BearAnimationManager found on this GameObject.");
 
         GameObject playerObj = GameObject.FindGameObjectWithTag(playerTag);
         if (playerObj != null)
@@ -48,7 +58,17 @@ public class TeddyBear : MonoBehaviour
         }
         else if (distance <= detectionRange)
         {
-            agent.SetDestination(player.position);
+            // Trigger activation animations the first time the player is detected
+            if (!hasActivated)
+            {
+                hasActivated = true;
+                if (animManager != null)
+                    animManager.ActivateBear();
+                StartCoroutine(ChaseDelay());
+            }
+
+            if (canChase)
+                agent.SetDestination(player.position);
         }
         else
         {
@@ -57,11 +77,23 @@ public class TeddyBear : MonoBehaviour
         }
     }
 
+    IEnumerator ChaseDelay()
+    {
+        yield return new WaitForSeconds(chaseDelay);
+        canChase = true;
+    }
+
     IEnumerator Explode()
     {
         isExploding = true;
         agent.isStopped = true;
         agent.ResetPath();
+
+        // Trigger explosion animation before hiding the bear
+        if (animManager != null)
+            animManager.TriggerExplosionAnim();
+
+        yield return new WaitForSeconds(explosionDelay);
 
         Vector3 explosionPos = transform.position;
 
@@ -78,14 +110,12 @@ public class TeddyBear : MonoBehaviour
 
         DealDamage(explosionPos);
 
-        yield return new WaitForSeconds(explosionDelay);
         Destroy(gameObject);
     }
 
     void DealDamage(Vector3 center)
     {
         Collider[] hits = Physics.OverlapSphere(center, explosionRadius, damageLayer);
-
         foreach (Collider hit in hits)
         {
             if (!hit.CompareTag(playerTag) && !hit.transform.root.CompareTag(playerTag))
@@ -102,10 +132,8 @@ public class TeddyBear : MonoBehaviour
     {
         Gizmos.color = new Color(1f, 1f, 0f, 0.25f);
         Gizmos.DrawSphere(transform.position, detectionRange);
-
         Gizmos.color = new Color(1f, 0.5f, 0f, 0.4f);
         Gizmos.DrawSphere(transform.position, explodeRange);
-
         Gizmos.color = new Color(1f, 0f, 0f, 0.4f);
         Gizmos.DrawSphere(transform.position, explosionRadius);
     }
