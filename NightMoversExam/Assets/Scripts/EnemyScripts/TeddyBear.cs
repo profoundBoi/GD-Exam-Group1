@@ -13,7 +13,6 @@ public class TeddyBear : MonoBehaviour
     public float explosionDelay = 1f;
     public float explosionRadius = 3f;
     public int damage = 50;
-    public LayerMask damageLayer;
     public GameObject explosionEffect;
 
     [Header("Target")]
@@ -21,7 +20,7 @@ public class TeddyBear : MonoBehaviour
     public string playerTag = "Player";
 
     [Header("Animation")]
-    public float chaseDelay = 2f; // Should match animationBools[0] clip length
+    public float chaseDelay = 2f;
 
     private NavMeshAgent agent;
     private bool isExploding = false;
@@ -58,7 +57,6 @@ public class TeddyBear : MonoBehaviour
         }
         else if (distance <= detectionRange)
         {
-            // Trigger activation animations the first time the player is detected
             if (!hasActivated)
             {
                 hasActivated = true;
@@ -89,7 +87,6 @@ public class TeddyBear : MonoBehaviour
         agent.isStopped = true;
         agent.ResetPath();
 
-        // Trigger explosion animation before hiding the bear
         if (animManager != null)
             animManager.TriggerExplosionAnim();
 
@@ -115,12 +112,9 @@ public class TeddyBear : MonoBehaviour
 
     void DealDamage(Vector3 center)
     {
-        Collider[] hits = Physics.OverlapSphere(center, explosionRadius, damageLayer);
+        Collider[] hits = Physics.OverlapSphere(center, explodeRange);
         foreach (Collider hit in hits)
         {
-            if (!hit.CompareTag(playerTag) && !hit.transform.root.CompareTag(playerTag))
-                continue;
-
             IDamageable damageable = hit.GetComponentInParent<IDamageable>();
             if (damageable != null)
                 damageable.TakeDamage(damage);
