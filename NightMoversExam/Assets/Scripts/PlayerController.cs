@@ -33,6 +33,7 @@ public class PlayerController3D : MonoBehaviour
 
     private GameObject InteractableObject;
     public LayerMask Interact;
+    public bool IsInteracting;
 
     [SerializeField]
     private int Interactrange;
@@ -53,6 +54,11 @@ public class PlayerController3D : MonoBehaviour
     [Header("Carry Object Settings")]
     [SerializeField] private ObjectweightManager ObjectScript;
 
+    [Header("CheckList Settings")]
+    [SerializeField]
+    private GameObject listDevice;
+    [SerializeField]
+    private GameObject OtherPlayersTablet;
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -63,6 +69,8 @@ public class PlayerController3D : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        OtherPlayersTablet.SetActive(false);
+        listDevice.SetActive(false);
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -82,10 +90,23 @@ public class PlayerController3D : MonoBehaviour
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
     }
 
+    public void OnOpenCheckList(InputAction.CallbackContext context)
+    {
+        if (!listDevice.activeSelf)
+        {
+            listDevice.SetActive(true);
+        }
+        else if (listDevice.activeSelf)
+        {
+            listDevice.SetActive(false);
+        }
+    }
+
     public void OnInteract(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
+            IsInteracting = true;
             Ray ray = new Ray(PlayerCamera.position, PlayerCamera.forward);
             RaycastHit hit;
 
@@ -112,6 +133,7 @@ public class PlayerController3D : MonoBehaviour
         }
         else if (context.canceled)
         {
+            IsInteracting =false;
             if (currentHeavyObject != null)
             {
                 currentHeavyObject.ClearHoldPositions();
@@ -205,6 +227,8 @@ public class PlayerController3D : MonoBehaviour
             }
         }
     }
+
+    
 
     bool IsGrounded()
     {

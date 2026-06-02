@@ -281,12 +281,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4106230889166020879, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: m_Name
-      value: PlayerPrefab (1)
+      value: Player 2
       objectReference: {fileID: 0}
     - target: {fileID: 5888588999554779661, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -20.599976
       objectReference: {fileID: 0}
+    - target: {fileID: 8738487959405839610, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
+      propertyPath: listDevice
+      value: 
+      objectReference: {fileID: 535607845}
+    - target: {fileID: 8738487959405839610, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
+      propertyPath: OtherPlayersTablet
+      value: 
+      objectReference: {fileID: 2121879753}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -562,7 +570,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DeliveryZone
   deliveryItems:
   - objectTag: Test01
-    uiImage: {fileID: 0}
+    uiImageP1: {fileID: 0}
+    uiImageP2: {fileID: 0}
   depositEffect: {fileID: 0}
   depositSound: {fileID: 0}
 --- !u!65 &429200627
@@ -727,6 +736,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8a6d746ac22ead4c89450fa0f5f19a2, type: 3}
+--- !u!1 &535607845 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1422594707787400110, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
+  m_PrefabInstance: {fileID: 96354121}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &615711610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,6 +1097,11 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 765517406336058343, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
   m_PrefabInstance: {fileID: 96354121}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1246391038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1422594707787400110, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
+  m_PrefabInstance: {fileID: 1249638791}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1249638791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1133,7 +1152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4106230889166020879, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: m_Name
-      value: PlayerPrefab
+      value: Player 1
       objectReference: {fileID: 0}
     - target: {fileID: 5888588999554779661, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: m_LocalScale.x
@@ -1159,6 +1178,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 62
       objectReference: {fileID: 0}
+    - target: {fileID: 8738487959405839610, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
+      propertyPath: listDevice
+      value: 
+      objectReference: {fileID: 1571955530}
+    - target: {fileID: 8738487959405839610, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
+      propertyPath: OtherPlayersTablet
+      value: 
+      objectReference: {fileID: 1246391038}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1576,6 +1603,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ec265a08253df440b461bc52875e93d, type: 3}
+--- !u!1 &1571955530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2512784706993256757, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
+  m_PrefabInstance: {fileID: 1249638791}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1623637119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,6 +1839,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2121879753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2512784706993256757, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
+  m_PrefabInstance: {fileID: 96354121}
+  m_PrefabAsset: {fileID: 0}
 --- !u!20 &2126353710 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 765517406336058343, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
@@ -1830,7 +1867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7415254233007931721, guid: 965c0e75402446a4394e5740798c1d84, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.95635
+      value: 11.66
       objectReference: {fileID: 0}
     - target: {fileID: 7415254233007931721, guid: 965c0e75402446a4394e5740798c1d84, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1939,9 +1976,9 @@ SceneRoots:
   - {fileID: 615711613}
   - {fileID: 287222272}
   - {fileID: 1249638791}
+  - {fileID: 96354121}
   - {fileID: 1431329314}
   - {fileID: 451522496}
-  - {fileID: 96354121}
   - {fileID: 4286826579018782988}
   - {fileID: 1696820088}
   - {fileID: 1148466187004311205}

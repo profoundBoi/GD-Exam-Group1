@@ -59,8 +59,15 @@ public class BezierPathLine : MonoBehaviour
         if (shouldDraw)
         {
             CalculateLine();
-            lr.enabled = true;
-            lr.positionCount = linePositions.Length;
+            if (playerController.IsInteracting)
+            {
+                lr.enabled = true;
+            }
+            else if (!playerController.IsInteracting)
+            {
+                lr.enabled = false;
+            }
+                lr.positionCount = linePositions.Length;
             lr.SetPositions(linePositions);
         }
         else if (wasDrawing && !shouldDraw)

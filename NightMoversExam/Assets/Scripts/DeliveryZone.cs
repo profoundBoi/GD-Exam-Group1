@@ -8,7 +8,8 @@ public class DeliveryZone : MonoBehaviour
     public class DeliveryItem
     {
         public string objectTag;
-        public Image uiImage;
+        public Image uiImageP1;
+        public Image uiImageP2;
     }
 
     [Header("Delivery Items")]
@@ -24,9 +25,14 @@ public class DeliveryZone : MonoBehaviour
     {
         foreach (DeliveryItem item in deliveryItems)
         {
-            if (item.uiImage != null)
+            if (item.uiImageP1 != null)
             {
-                item.uiImage.gameObject.SetActive(false);
+                item.uiImageP1.gameObject.SetActive(false);
+            }
+
+            if (item.uiImageP2 != null)
+            {
+                item.uiImageP2.gameObject.SetActive(false);
             }
         }
     }
@@ -50,9 +56,14 @@ public class DeliveryZone : MonoBehaviour
     {
         depositedTags.Add(item.objectTag);
 
-        if (item.uiImage != null)
+        if (item.uiImageP1 != null)
         {
-            item.uiImage.gameObject.SetActive(true);
+            item.uiImageP1.gameObject.SetActive(true);
+        }
+
+        if (item.uiImageP2 != null)
+        {
+            item.uiImageP2.gameObject.SetActive(true);
         }
 
         if (depositEffect != null)
