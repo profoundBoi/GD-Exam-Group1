@@ -28,16 +28,11 @@ public class BearAnimationManager : MonoBehaviour
 
     IEnumerator PlayChaseAnimations()
     {
-        if (animationBools.Count > 0)
-        {
-            yield return new WaitForSeconds(2f);
-            anim.SetBool(animationBools[0], true);
-        }
-
-        if (animationBools.Count > 1)
-        {
-            yield return new WaitForSeconds(3.15f);
-            anim.SetBool(animationBools[1], true);
-        }
+        yield return new WaitForSeconds(2);
+        anim.SetBool(animationBools[0], true);
+        yield return new WaitForSeconds(3.15f);
+        anim.SetBool(animationBools[1], true);
+        yield return new WaitForSeconds(2.06f);
+        anim.SetBool(animationBools[2], true);
     }
 }
