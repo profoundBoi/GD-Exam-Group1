@@ -57,8 +57,6 @@ public class PlayerController3D : MonoBehaviour
     [Header("CheckList Settings")]
     [SerializeField]
     private GameObject listDevice;
-    [SerializeField]
-    private GameObject OtherPlayersTablet;
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -69,7 +67,6 @@ public class PlayerController3D : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        OtherPlayersTablet.SetActive(false);
         listDevice.SetActive(false);
     }
 
