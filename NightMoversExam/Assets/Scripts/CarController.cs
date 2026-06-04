@@ -5,33 +5,18 @@ using UnityEngine.InputSystem;
 public class CarController : MonoBehaviour
 {
     [Header("Engine")]
-    public float motorForce = 1500f;
-    public float brakeForce = 3000f;
-    public float maxSteerAngle = 30f;
-
-    [Header("Balance")]
-    public Vector3 centerOfMass = new Vector3(0, -1.5f, 0);
-
-    [Header("Wheel Colliders")]
-    public WheelCollider frontLeftWheel;
-    public WheelCollider frontRightWheel;
-    public WheelCollider rearLeftWheel;
-    public WheelCollider rearRightWheel;
-
-    [Header("Front Wheel Visuals (optional)")]
-    public Transform frontLeftTransform;
-    public Transform frontRightTransform;
+    public float moveSpeed = 20f;
+    public float reverseSpeed = 10f;
+    public float turnSpeed = 60f;
 
     private float steerInput;
     private float accelerateInput;
-    private bool isBraking;
-
+    private float reverseInput;
     private Rigidbody rb;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        rb.centerOfMass = centerOfMass;
     }
 
     public void OnAccelerate(InputAction.CallbackContext context)
@@ -41,7 +26,7 @@ public class CarController : MonoBehaviour
 
     public void OnBrake(InputAction.CallbackContext context)
     {
-        isBraking = context.ReadValue<float>() > 0.1f;
+        reverseInput = context.ReadValue<float>();
     }
 
     public void OnSteer(InputAction.CallbackContext context)
@@ -51,30 +36,15 @@ public class CarController : MonoBehaviour
 
     void FixedUpdate()
     {
-        float motor = isBraking ? 0f : accelerateInput * motorForce;
-        float brake = isBraking ? brakeForce : 0f;
+        float drive = (accelerateInput * moveSpeed) - (reverseInput * reverseSpeed);
+        rb.linearVelocity = transform.forward * drive;
 
-        rearLeftWheel.motorTorque = motor;
-        rearRightWheel.motorTorque = motor;
-
-        frontLeftWheel.brakeTorque = brake;
-        frontRightWheel.brakeTorque = brake;
-        rearLeftWheel.brakeTorque = brake;
-        rearRightWheel.brakeTorque = brake;
-
-        float steer = steerInput * maxSteerAngle;
-        frontLeftWheel.steerAngle = steer;
-        frontRightWheel.steerAngle = steer;
-
-        UpdateWheel(frontLeftWheel, frontLeftTransform);
-        UpdateWheel(frontRightWheel, frontRightTransform);
-    }
-
-    void UpdateWheel(WheelCollider col, Transform t)
-    {
-        if (t == null) return;
-        col.GetWorldPose(out Vector3 pos, out Quaternion rot);
-        t.position = pos;
-        t.rotation = rot;
+        float speed = rb.linearVelocity.magnitude;
+        if (speed > 0.5f)
+        {
+            float turnDirection = accelerateInput > 0.1f ? 1f : (reverseInput > 0.1f ? -1f : 0f);
+            float turn = steerInput * turnSpeed * Time.fixedDeltaTime * turnDirection;
+            transform.Rotate(0f, turn, 0f);
+        }
     }
 }
