@@ -619,6 +619,34 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: afd19f37-5c83-4c04-85af-88ef482781e2
     m_ActionName: Player/CheckList
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b72bb1dc-acae-42ff-8f8b-fc1ff1d4267f
+    m_ActionName: Car/Brake
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 02383c8d-396b-4214-a147-8c6953b1ca6b
+    m_ActionName: Car/Accelerate
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 53ecc3ce-d938-436e-8224-f6f8a7b4f249
+    m_ActionName: Car/Steer
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ab9a6377-f2bf-4f04-ac71-d0f8af598a58
+    m_ActionName: 'Player/Pause[/DualShock4GamepadHID/start]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
@@ -698,6 +726,7 @@ MonoBehaviour:
   Interact:
     serializedVersion: 2
     m_Bits: 8
+  IsInteracting: 0
   Interactrange: 50
   HoldPosition: {fileID: 6494941283866228538}
   MidlePoint: {fileID: 3963122518553451155}
