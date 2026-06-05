@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,6 +15,9 @@ public class CarController : MonoBehaviour
     private float reverseInput;
     private Rigidbody rb;
 
+    public float SteeringInput => steerInput;
+    private bool isDriving;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -21,7 +25,17 @@ public class CarController : MonoBehaviour
 
     public void OnAccelerate(InputAction.CallbackContext context)
     {
-        accelerateInput = context.ReadValue<float>();
+        if(context.performed)
+        {
+            accelerateInput = context.ReadValue<float>();
+            StartCoroutine(SpeedAcceleration());
+            isDriving = true;
+        }
+        else if (context.canceled)
+        {
+            moveSpeed = 0f;
+            isDriving = false;
+        }
     }
 
     public void OnBrake(InputAction.CallbackContext context)
@@ -32,6 +46,22 @@ public class CarController : MonoBehaviour
     public void OnSteer(InputAction.CallbackContext context)
     {
         steerInput = context.ReadValue<float>();
+    }
+
+    IEnumerator SpeedAcceleration()
+    {
+        
+
+        if (moveSpeed < 130 && isDriving)
+        {
+            moveSpeed += 1f;
+            yield return new WaitForSeconds(0.1f);
+            StartCoroutine(SpeedAcceleration());
+        }
+        else if (!isDriving)
+        {
+            moveSpeed = 0;
+        }
     }
 
     void FixedUpdate()
