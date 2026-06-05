@@ -743,6 +743,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 520.8
       objectReference: {fileID: 0}
+    - target: {fileID: 7020574069597114326, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020574069597114326, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -561
+      objectReference: {fileID: 0}
     - target: {fileID: 7314567822474377975, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: m_Texture
       value: 
@@ -1823,6 +1831,14 @@ PrefabInstance:
     - target: {fileID: 4149670716638919299, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: m_SizeDelta.y
       value: 520.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149670716638919299, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149670716638919299, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 594
       objectReference: {fileID: 0}
     - target: {fileID: 5888588999554779661, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: m_AnchoredPosition.x
