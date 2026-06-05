@@ -57,6 +57,9 @@ public class PlayerController3D : MonoBehaviour
     [Header("CheckList Settings")]
     [SerializeField]
     private GameObject listDevice;
+    public AudioSource audioSource;
+    [SerializeField]
+    private AudioClip OpenTabletAudio, CloseTabletAudio;
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -89,13 +92,24 @@ public class PlayerController3D : MonoBehaviour
 
     public void OnOpenCheckList(InputAction.CallbackContext context)
     {
-        if (!listDevice.activeSelf)
+        if (context.performed)
         {
-            listDevice.SetActive(true);
-        }
-        else if (listDevice.activeSelf)
-        {
-            listDevice.SetActive(false);
+            if (!listDevice.activeSelf)
+            {
+                listDevice.SetActive(true);
+                audioSource.clip = null;
+                audioSource.clip = OpenTabletAudio;
+                audioSource.Stop();
+                audioSource.Play();
+            }
+            else if (listDevice.activeSelf)
+            {
+                listDevice.SetActive(false);
+                audioSource.clip = null;
+                audioSource.clip = CloseTabletAudio;
+                audioSource.Stop();
+                audioSource.Play();
+            }
         }
     }
 
