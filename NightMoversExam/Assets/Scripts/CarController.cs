@@ -14,6 +14,8 @@ public class CarController : MonoBehaviour
     private float reverseInput;
     private Rigidbody rb;
 
+    public float SteeringInput => steerInput;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
