@@ -460,8 +460,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CarCameraOffset
   cinemachineCamera: {fileID: 175719230}
   car: {fileID: 474969613}
-  maxOffset: 10
-  smoothSpeed: 30
+  maxOffset: 5
+  smoothSpeed: 151.6
 --- !u!1 &336294744
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,11 +961,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7333103653016053118, guid: 550ef19daa7cca14a867c5600e7f5fa3, type: 3}
       propertyPath: moveSpeed
-      value: 130
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7333103653016053118, guid: 550ef19daa7cca14a867c5600e7f5fa3, type: 3}
       propertyPath: turnSpeed
-      value: 150
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 7333103653016053118, guid: 550ef19daa7cca14a867c5600e7f5fa3, type: 3}
       propertyPath: reverseSpeed
