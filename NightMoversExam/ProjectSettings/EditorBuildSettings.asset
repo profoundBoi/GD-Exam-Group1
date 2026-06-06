@@ -15,6 +15,18 @@ EditorBuildSettings:
     path: Assets/Scenes/neighbourhood.unity
     guid: cb65ac3a4c882854b855097b1c17e723
   - enabled: 1
+    path: Assets/Scenes/House 1.unity
+    guid: bc7ff4a2d2d82864caacf269fca11965
+  - enabled: 1
+    path: Assets/Scenes/Delivery01.unity
+    guid: 2eaca7d120f752343bdc0cf384bfad3b
+  - enabled: 1
+    path: Assets/Scenes/Delivery02.unity
+    guid: 05856511749f739409a45c51b734a48c
+  - enabled: 1
+    path: Assets/Scenes/Delivery03.unity
+    guid: b96f705c339c4c74d9b5951a72ed76e3
+  - enabled: 1
     path: Assets/Scenes/Rea.unity
     guid: 429181ccb0417cb4eba3746f4e940949
   m_configObjects:

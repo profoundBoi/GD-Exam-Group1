@@ -926,14 +926,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Heavy Object
       objectReference: {fileID: 0}
-    - target: {fileID: 5532537692219801756, guid: b8a6d746ac22ead4c89450fa0f5f19a2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6040794234793148943, guid: b8a6d746ac22ead4c89450fa0f5f19a2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7022395300447880777, guid: b8a6d746ac22ead4c89450fa0f5f19a2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -2539,10 +2531,6 @@ PrefabInstance:
     - target: {fileID: 663849109634381441, guid: 1ec265a08253df440b461bc52875e93d, type: 3}
       propertyPath: m_Name
       value: Light Object
-      objectReference: {fileID: 0}
-    - target: {fileID: 663849109634381441, guid: 1ec265a08253df440b461bc52875e93d, type: 3}
-      propertyPath: m_TagString
-      value: Test01
       objectReference: {fileID: 0}
     - target: {fileID: 6868139113065766578, guid: 1ec265a08253df440b461bc52875e93d, type: 3}
       propertyPath: m_LocalPosition.x
