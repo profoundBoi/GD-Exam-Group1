@@ -1,5 +1,8 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
+
 
 public class MoneyManager : MonoBehaviour
 {
@@ -8,8 +11,14 @@ public class MoneyManager : MonoBehaviour
     [Header("Money")]
     public int totalMoney = 0;
 
+    [Header("Sliders")]
+    public GameObject Player1Slider, Player2Slider;
+    public UnityEngine.UI.Slider player1MoneySlider, player2MoneySlider;
+
     [Header("UI")]
     public TMP_Text moneyText;
+
+
 
     private void Awake()
     {
@@ -27,6 +36,8 @@ public class MoneyManager : MonoBehaviour
     private void Start()
     {
         UpdateMoneyUI();
+        player1MoneySlider = Player1Slider.GetComponent<UnityEngine.UI.Slider>();
+        player2MoneySlider = Player2Slider.GetComponent<UnityEngine.UI.Slider>();
     }
 
     // Adds money to total
@@ -41,6 +52,8 @@ public class MoneyManager : MonoBehaviour
 
         Debug.Log("Money Added: +" + amount);
         Debug.Log("Current Total: " + totalMoney);
+
+
     }
 
     // Removes money from total
@@ -70,5 +83,14 @@ public class MoneyManager : MonoBehaviour
     public int GetMoney()
     {
         return totalMoney;
+    }
+
+    private void Update()
+    {
+        if (player1MoneySlider != null && player2MoneySlider != null)
+        {
+            player1MoneySlider.value = totalMoney;
+            player2MoneySlider.value = totalMoney;
+        }
     }
 }
