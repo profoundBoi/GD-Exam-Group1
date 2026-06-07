@@ -1506,6 +1506,46 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2721319075311628471, guid: 8f2ad3a800a4cad45938b5332374c979, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 2721319075311628471, guid: 8f2ad3a800a4cad45938b5332374c979, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 59.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 2721319075311628471, guid: 8f2ad3a800a4cad45938b5332374c979, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 105.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 2721319075311628471, guid: 8f2ad3a800a4cad45938b5332374c979, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2721319075311628471, guid: 8f2ad3a800a4cad45938b5332374c979, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2721319075311628471, guid: 8f2ad3a800a4cad45938b5332374c979, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2721319075311628471, guid: 8f2ad3a800a4cad45938b5332374c979, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2721319075311628471, guid: 8f2ad3a800a4cad45938b5332374c979, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2721319075311628471, guid: 8f2ad3a800a4cad45938b5332374c979, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2721319075311628471, guid: 8f2ad3a800a4cad45938b5332374c979, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 3803187500681302585, guid: 8f2ad3a800a4cad45938b5332374c979, type: 3}
       propertyPath: m_Layer
       value: 3
