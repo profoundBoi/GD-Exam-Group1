@@ -2150,7 +2150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4106230889166020879, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: m_Name
-      value: PlayerPrefab (1)
+      value: Player 2
       objectReference: {fileID: 0}
     - target: {fileID: 4149670716638919299, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2410,7 +2410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4106230889166020879, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: m_Name
-      value: PlayerPrefab
+      value: Player 1
       objectReference: {fileID: 0}
     - target: {fileID: 4106230889166020879, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: m_Layer

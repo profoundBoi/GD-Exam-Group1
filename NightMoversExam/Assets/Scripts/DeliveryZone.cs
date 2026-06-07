@@ -8,8 +8,8 @@ public class DeliveryZone : MonoBehaviour
     public class DeliveryItem
     {
         public string objectTag;
-        public Image uiImageP1;
-        public Image uiImageP2;
+        public RawImage uiImageP1;
+        public RawImage uiImageP2;
     }
 
     [Header("Delivery Items")]
@@ -27,12 +27,12 @@ public class DeliveryZone : MonoBehaviour
         {
             if (item.uiImageP1 != null)
             {
-                item.uiImageP1.gameObject.SetActive(false);
+                item.uiImageP1.color = Color.white;
             }
 
             if (item.uiImageP2 != null)
             {
-                item.uiImageP2.gameObject.SetActive(false);
+                item.uiImageP2.color = Color.white;
             }
         }
     }
@@ -58,12 +58,12 @@ public class DeliveryZone : MonoBehaviour
 
         if (item.uiImageP1 != null)
         {
-            item.uiImageP1.gameObject.SetActive(true);
+            item.uiImageP1.color = Color.green;
         }
 
         if (item.uiImageP2 != null)
         {
-            item.uiImageP2.gameObject.SetActive(true);
+            item.uiImageP2.color = Color.green;
         }
 
         if (depositEffect != null)

@@ -8,6 +8,11 @@ TagManager:
   - CarrySpot
   - Test01
   - Car
+  - Lamp
+  - Mirror
+  - SideTable
+  - NeckLace
+  - Table
   layers:
   - Default
   - TransparentFX
