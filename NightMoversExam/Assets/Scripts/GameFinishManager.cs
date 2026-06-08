@@ -4,6 +4,7 @@ using NUnit.Framework;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class GameFinishManager : MonoBehaviour
 {
@@ -23,7 +24,8 @@ public class GameFinishManager : MonoBehaviour
     [SerializeField]
     private GameObject MissionPanel,NextButton;
     private bool canCheck;
-    
+    [SerializeField]
+    private string SceneToLoad;
 
     private void Update()
     {
@@ -42,6 +44,7 @@ public class GameFinishManager : MonoBehaviour
             if (!canCheck)
             {
                 canCheck = true;
+                Time.timeScale = 0;
                 eventSystem.SetSelectedGameObject(NextButton);
             }
         }
@@ -51,6 +54,13 @@ public class GameFinishManager : MonoBehaviour
 
     public void NextText()
     {
-        textindex++;
+        if (textindex < 3)
+        {
+            textindex++;
+        }
+        else if (textindex == 3)
+        {
+            SceneManager.LoadScene(SceneToLoad);
+        }
     }
 }
