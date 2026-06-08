@@ -1273,6 +1273,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: avoidList
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
       propertyPath: ListNumber
       value: 3
       objectReference: {fileID: 0}
@@ -1317,21 +1321,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8718440401406302139, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 3927033464680538537, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 379079148}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
---- !u!224 &327849130 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3927033464680538537, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
-  m_PrefabInstance: {fileID: 327849129}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &336294744
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,78 +1542,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2fdfd2b085711743a96387282836a64, type: 3}
---- !u!1 &379079147
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 379079148}
-  - component: {fileID: 379079150}
-  - component: {fileID: 379079149}
-  m_Layer: 0
-  m_Name: Phone
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &379079148
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379079147}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 327849130}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -493, y: 0}
-  m_SizeDelta: {x: 940.8, y: 500}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &379079149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379079147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 6f652d2caf85b144a8991033492d9734, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &379079150
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379079147}
-  m_CullTransparentMesh: 1
 --- !u!1001 &383390506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3316,6 +3240,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2fdfd2b085711743a96387282836a64, type: 3}
+--- !u!114 &1023867947 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+  m_PrefabInstance: {fileID: 327849129}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b473bf0cde498904fbfebfc662d072ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameFinishManager
 --- !u!1 &1027443507
 GameObject:
   m_ObjectHideFlags: 0
@@ -6221,6 +6156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadSceneOnArrival
   carTag: Car
   sceneToLoad: House 1
+  gameFinisherScript: {fileID: 1023867947}
 --- !u!4 &1894213742 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1842947525370082486, guid: a2fdfd2b085711743a96387282836a64, type: 3}

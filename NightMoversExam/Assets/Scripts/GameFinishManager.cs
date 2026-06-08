@@ -27,26 +27,31 @@ public class GameFinishManager : MonoBehaviour
     [SerializeField]
     private string SceneToLoad;
     public GameObject Phone;
-
+    public bool avoidList;
     private void Update()
     {
-        for (int i = 0; i < objectsToDeliver.Count; i++)
+        
+        if(!avoidList)
         {
-            if (!objectsToDeliver[i].activeSelf)
+            for (int i = 0; i < objectsToDeliver.Count; i++)
             {
-                objectsDelivered[i] = true;
+                if (!objectsToDeliver[i].activeSelf)
+                {
+                    objectsDelivered[i] = true;
+                }
             }
-        }
 
-        if (objectsDelivered.All(b => b))
-        {
-            Debug.Log("All Objects Done");
-            MissionPanel.SetActive(true);
-            if (!canCheck)
+
+            if (objectsDelivered.All(b => b))
             {
-                canCheck = true;
-                Time.timeScale = 0;
-                eventSystem.SetSelectedGameObject(NextButton);
+                Debug.Log("All Objects Done");
+                MissionPanel.SetActive(true);
+                if (!canCheck)
+                {
+                    canCheck = true;
+                    Time.timeScale = 0;
+                    eventSystem.SetSelectedGameObject(NextButton);
+                }
             }
         }
 
@@ -71,6 +76,17 @@ public class GameFinishManager : MonoBehaviour
         else if (textindex == ListNumber)
         {
             SceneManager.LoadScene(SceneToLoad);
+        }
+    }
+
+    public void ShowCall()
+    {
+        MissionPanel.SetActive(true);
+        if (!canCheck)
+        {
+            canCheck = true;
+            Time.timeScale = 0;
+            eventSystem.SetSelectedGameObject(NextButton);
         }
     }
 }
