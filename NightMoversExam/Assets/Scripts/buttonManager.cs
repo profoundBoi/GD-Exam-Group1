@@ -17,6 +17,9 @@ public class buttonManager : MonoBehaviour
     [SerializeField]
     private GameObject currentSelectbutton;
 
+    [SerializeField]
+    private GameObject BackButton, ResumeButton;
+
     public void StartGame()
     {
         SceneManager.LoadScene(neighbourhoodScene);
@@ -30,6 +33,7 @@ public class buttonManager : MonoBehaviour
     public void OpenControls()
     {
         ControlsPanel.SetActive(true);
+        eventSystem.SetSelectedGameObject(BackButton);
     }
 
     public void ResumeGame()
@@ -42,6 +46,7 @@ public class buttonManager : MonoBehaviour
     public void CloseControls()
     {
         ControlsPanel.SetActive(false);
+        eventSystem.SetSelectedGameObject(ResumeButton);
     }
 
     public void OpenControlsPanel()

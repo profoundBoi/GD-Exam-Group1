@@ -71,6 +71,7 @@ public class PlayerController3D : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         listDevice.SetActive(false);
+        Time.timeScale = 1.0f;
     }
 
     public void OnMove(InputAction.CallbackContext context)

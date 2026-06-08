@@ -646,7 +646,6 @@ RectTransform:
   - {fileID: 6989324536870495690}
   - {fileID: 5429800077954163243}
   - {fileID: 7865684150102796875}
-  - {fileID: 4254776270911096596}
   - {fileID: 4946825452448997297}
   m_Father: {fileID: 7735517246263271081}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -719,7 +718,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4254776270911096596}
   m_Father: {fileID: 6326176123068560971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1224,11 +1224,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8789287b7ae2d5e4c80a1fea5be47f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::buttonManager
-  neighbourhoodScene: 
+  neighbourhoodScene: Main Menu
   PausePanel: {fileID: 1299701727901428433}
   ControlsPanel: {fileID: 1720923405822957867}
   eventSystem: {fileID: 0}
   currentSelectbutton: {fileID: 1062453803447329693}
+  BackButton: {fileID: 3851211681654523343}
+  ResumeButton: {fileID: 1062453803447329693}
 --- !u!1 &3851211681654523343
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,12 +1257,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3851211681654523343}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6326176123068560971}
+  m_Father: {fileID: 4946825452448997297}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1321,7 +1323,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8255016450144577571}
         m_TargetAssemblyTypeName: buttonManager, Assembly-CSharp
-        m_MethodName: ResumeGame
+        m_MethodName: CloseControls
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3709,6 +3711,10 @@ PrefabInstance:
       value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 8738487959405839610, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738487959405839610, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: listDevice
       value: 
       objectReference: {fileID: 9109227025199380701}
@@ -3716,6 +3722,10 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 7294320768850612738}
+    - target: {fileID: 8738487959405839610, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
+      propertyPath: Interactrange
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8738487959405839610, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: OpenTabletAudio
       value: 
@@ -4067,6 +4077,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8738487959405839610, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738487959405839610, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: listDevice
       value: 
       objectReference: {fileID: 6668698849353650178}
@@ -4074,6 +4088,10 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 2905183464345263342}
+    - target: {fileID: 8738487959405839610, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
+      propertyPath: Interactrange
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8738487959405839610, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: OpenTabletAudio
       value: 

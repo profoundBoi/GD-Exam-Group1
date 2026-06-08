@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 public class ValuableObject : MonoBehaviour
 {
     [Header("Object Info")]
@@ -24,12 +25,14 @@ public class ValuableObject : MonoBehaviour
     public GameObject breakEffect;
     private int currentValue;
     private bool isBroken = false;
+    private AudioSource audioSource;
     private void Start()
     {
         currentDurability = maxDurability;
         currentValue = maxValue;
         MoneyManager.Instance.AddMoney(maxValue);
         UpdateValueUI();
+        audioSource = GetComponent<AudioSource>();
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -79,7 +82,7 @@ public class ValuableObject : MonoBehaviour
         UpdateValueUI();
         if (currentDurability <= 0)
         {
-            BreakObject();
+            StartCoroutine(BreakObjectRoutine());
         }
     }
     void UpdateValueUI()
@@ -91,6 +94,7 @@ public class ValuableObject : MonoBehaviour
     }
     void BreakObject()
     {
+
         isBroken = true;
         if (currentValue > 0)
         {
@@ -107,6 +111,14 @@ public class ValuableObject : MonoBehaviour
         }
         gameObject.SetActive(false);
     }
+
+    IEnumerator BreakObjectRoutine()
+    {
+        audioSource.Play();
+        yield return new WaitForSeconds(0.5f);
+        BreakObject();
+    }
+
     enum DamageTier
     {
         T1_Graze,
