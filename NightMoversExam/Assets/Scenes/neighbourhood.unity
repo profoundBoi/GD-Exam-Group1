@@ -1220,6 +1220,98 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1842947525370082486, guid: a2fdfd2b085711743a96387282836a64, type: 3}
   m_PrefabInstance: {fileID: 2094255656}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &327849129
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1324159874307390118, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: m_Name
+      value: Game Finish Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2260272982237372775, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -316.48102
+      objectReference: {fileID: 0}
+    - target: {fileID: 2260272982237372775, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 47.27261
+      objectReference: {fileID: 0}
+    - target: {fileID: 2260272982237372775, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 88.73297
+      objectReference: {fileID: 0}
+    - target: {fileID: 2260272982237372775, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2260272982237372775, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2260272982237372775, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2260272982237372775, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2260272982237372775, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2260272982237372775, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2260272982237372775, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: 'missionTexts.Array.data[0]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: 'missionTexts.Array.data[1]'
+      value: "You'll be working three jobs tonight. The first house is 29 Brakers
+        Road. Client says  other movers bailed. Didn't say why. Doesn't matter we
+        don't ask questions. Same rules as  always: don't damage anything, or it
+        comes out of your pay. I'll send the list through. Stick to it.  And if something
+        feels off in there\u2026 just keep moving"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: 'missionTexts.Array.data[2]'
+      value: 'Don''t stop to look."This call serves as the  player''s introduction
+        to the world, the company''s culture, and the rules they will follow for
+        the  entire game. The salary system and checklist mechanic are established
+        here so that players  understand the stakes before they enter the first house.
+        The call''s ominous undertone is  deliberate. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: 'missionTexts.Array.data[3]'
+      value: ' Lines like "Client says other movers bailed. Didn''t say why" and
+        "if something feels  off, just keep moving" signal that something is wrong
+        without explaining what. This withholding  of information is important: players
+        are warned but not briefed, which means they enter the '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8326172873565854308, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8718440401406302139, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
 --- !u!1 &336294744
 GameObject:
   m_ObjectHideFlags: 0
@@ -6665,3 +6757,4 @@ SceneRoots:
   - {fileID: 174155777}
   - {fileID: 846510387}
   - {fileID: 988816448782054320}
+  - {fileID: 327849129}
