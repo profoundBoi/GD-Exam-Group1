@@ -264,8 +264,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 131.80693, y: 169.74779, z: 1.6568214}
-  m_Center: {x: -0.3292266, y: -37.957466, z: -0.30281988}
+  m_Size: {x: 131.80693, y: 167.75757, z: 1.6568214}
+  m_Center: {x: -0.32922664, y: 0.019320445, z: -0.30281988}
 --- !u!82 &1721425
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4025,7 +4025,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 509353872493637069, guid: 29c0cbce67be1674296d89ea809e536d, type: 3}
       propertyPath: Interactrange
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1299701727901428433, guid: 29c0cbce67be1674296d89ea809e536d, type: 3}
       propertyPath: m_IsActive
@@ -4033,7 +4033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1482022300592684937, guid: 29c0cbce67be1674296d89ea809e536d, type: 3}
       propertyPath: Interactrange
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1707599571933297697, guid: 29c0cbce67be1674296d89ea809e536d, type: 3}
       propertyPath: m_text

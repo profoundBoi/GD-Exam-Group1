@@ -7432,6 +7432,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 509353872493637069, guid: 29c0cbce67be1674296d89ea809e536d, type: 3}
+      propertyPath: Interactrange
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 757856719229017295, guid: 29c0cbce67be1674296d89ea809e536d, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.0000000074505797
@@ -7455,6 +7459,10 @@ PrefabInstance:
     - target: {fileID: 1357888651981767902, guid: 29c0cbce67be1674296d89ea809e536d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -94
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482022300592684937, guid: 29c0cbce67be1674296d89ea809e536d, type: 3}
+      propertyPath: Interactrange
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1542105349721761511, guid: 29c0cbce67be1674296d89ea809e536d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7840,7 +7848,7 @@ PrefabInstance:
       objectReference: {fileID: 1914264053}
     - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
       propertyPath: missionTexts.Array.size
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
       propertyPath: 'missionTexts.Array.data[0]'

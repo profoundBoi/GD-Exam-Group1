@@ -1022,6 +1022,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Picture Frame
       objectReference: {fileID: 0}
+    - target: {fileID: 509353872493637069, guid: 29c0cbce67be1674296d89ea809e536d, type: 3}
+      propertyPath: Interactrange
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482022300592684937, guid: 29c0cbce67be1674296d89ea809e536d, type: 3}
+      propertyPath: Interactrange
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1707599571933297697, guid: 29c0cbce67be1674296d89ea809e536d, type: 3}
       propertyPath: m_text
       value: Book

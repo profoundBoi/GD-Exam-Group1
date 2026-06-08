@@ -51,6 +51,11 @@ public class GameFinishManager : MonoBehaviour
                     canCheck = true;
                     Time.timeScale = 0;
                     eventSystem.SetSelectedGameObject(NextButton);
+                    Scene CurrentScene = SceneManager.GetActiveScene();
+                    if (CurrentScene.name == "House 3")
+                    {
+                        SceneManager.LoadScene("WinScreen");
+                    }
                 }
             }
         }
