@@ -20,6 +20,19 @@ public class buttonManager : MonoBehaviour
     [SerializeField]
     private GameObject BackButton, ResumeButton;
 
+    [Header("Win Setting")]
+    public GameObject ButtonToSelect;
+
+    private void Start()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        if (currentScene.name == "WinScreen")
+        {
+            eventSystem.SetSelectedGameObject(ButtonToSelect);
+        }
+
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene(neighbourhoodScene);
