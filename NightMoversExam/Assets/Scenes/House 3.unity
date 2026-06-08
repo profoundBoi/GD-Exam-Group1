@@ -6024,7 +6024,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
       propertyPath: ListNumber
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
       propertyPath: SceneToLoad
@@ -6034,6 +6034,42 @@ PrefabInstance:
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 1914264053}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: missionTexts.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: 'missionTexts.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: 'missionTexts.Array.data[1]'
+      value: Second job is on 12 Victory Street.  Clients had to flee the place.
+        Too scared to go back themselves. They just want their things out.  Emotionally
+        valuable stuff, so be careful with it. I'll send the list. Don't hang around
+        in there  longer than you need to. This one feels different.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: 'missionTexts.Array.data[2]'
+      value: Because the rules and context of the job have  already been established
+        in the House 1 call, this call does not repeat them. Its sole purpose is 
+        to raise the stakes and deepen unease before players enter the second house.
+        The tone is  noticeably more strained than the first call the dispatcher,
+        who projected control and  indifference in House 1, now sounds uncertain.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: 'missionTexts.Array.data[3]'
+      value: ' The shift in the dispatcher''s composure is  significant: if the person
+        sending players into these jobs sounds unsettled, it signals that House 
+        2 is beyond even their usual frame of reference. The mention of emotionally
+        valuable items also  quietly reintroduces the damage stakes without restating
+        the rules explicitly,'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: 'missionTexts.Array.data[4]'
+      value: ' and adds a layer of  moral weight; these aren''t just objects, they''re
+        what the family chose to risk going back for. '
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

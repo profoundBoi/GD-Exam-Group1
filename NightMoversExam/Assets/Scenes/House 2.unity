@@ -2705,7 +2705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
       propertyPath: ListNumber
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
       propertyPath: SceneToLoad
@@ -2717,10 +2717,14 @@ PrefabInstance:
       objectReference: {fileID: 497470869}
     - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
       propertyPath: missionTexts.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
       propertyPath: 'missionTexts.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: 'missionTexts.Array.data[1]'
       value: "Good work tonight. Both jobs done. Last thing, Jo, you still need to
         finish moving out  of your place, yeah? May as well do it now while you've
         got the help. Don\u2019t worry, I\u2019ll still pay  you both. Talk tomorrow.\"
@@ -2728,7 +2732,7 @@ PrefabInstance:
         disturbing jobs, "
       objectReference: {fileID: 0}
     - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
-      propertyPath: 'missionTexts.Array.data[1]'
+      propertyPath: 'missionTexts.Array.data[2]'
       value: the dispatcher sounds relaxed and familiar. The framing of the third 
         house as a simple personal job removes any sense of professional stakes,
         and naming one of  the players directly (Jo) makes the space feel intimate
