@@ -18,17 +18,17 @@ EditorBuildSettings:
     path: Assets/Scenes/House 1.unity
     guid: bc7ff4a2d2d82864caacf269fca11965
   - enabled: 1
-    path: Assets/Scenes/Delivery01.unity
-    guid: 2eaca7d120f752343bdc0cf384bfad3b
+    path: Assets/Scenes/House 2.unity
+    guid: 3f77a3d172ca49348978d1bf80dcc564
   - enabled: 1
-    path: Assets/Scenes/Delivery02.unity
-    guid: 05856511749f739409a45c51b734a48c
-  - enabled: 1
-    path: Assets/Scenes/Delivery03.unity
-    guid: b96f705c339c4c74d9b5951a72ed76e3
+    path: Assets/Scenes/House 3.unity
+    guid: b83c69847c58f22419cdcb090dfb1afd
   - enabled: 1
     path: Assets/Scenes/Rea.unity
     guid: 429181ccb0417cb4eba3746f4e940949
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: fc79da1ee3fcd3e4a837f403bf42a4f2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
