@@ -6070,6 +6070,50 @@ PrefabInstance:
       value: ' and adds a layer of  moral weight; these aren''t just objects, they''re
         what the family chose to risk going back for. '
       objectReference: {fileID: 0}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: objectsDelivered.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: objectsToDeliver.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: 'objectsDelivered.Array.data[5]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: 'objectsDelivered.Array.data[6]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: 'objectsToDeliver.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1480732037}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: 'objectsToDeliver.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1477433378}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: 'objectsToDeliver.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1862752580}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: 'objectsToDeliver.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1854147251}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: 'objectsToDeliver.Array.data[4]'
+      value: 
+      objectReference: {fileID: 57978288}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: 'objectsToDeliver.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1945816328}
+    - target: {fileID: 8718440401406302139, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
