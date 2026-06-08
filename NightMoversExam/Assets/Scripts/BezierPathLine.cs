@@ -1,4 +1,3 @@
-// Particle_System_Mover.cs
 using UnityEngine;
 
 [RequireComponent(typeof(LineRenderer))]
@@ -22,6 +21,7 @@ public class BezierPathLine : MonoBehaviour
 
     private LineRenderer lr;
     private Transform heldObjectTransform;
+    private Transform lookedAtObjectTransform;
     private Vector3[] linePositions;
     private bool wasDrawing = false;
 
@@ -53,21 +53,15 @@ public class BezierPathLine : MonoBehaviour
 
     void Update()
     {
+        UpdateLookedAtObject();
         UpdateHeldObjectReference();
         bool shouldDraw = ShouldDrawLine();
 
         if (shouldDraw)
         {
             CalculateLine();
-            if (playerController.IsInteracting)
-            {
-                lr.enabled = true;
-            }
-            else if (!playerController.IsInteracting)
-            {
-                lr.enabled = false;
-            }
-                lr.positionCount = linePositions.Length;
+            lr.enabled = true;
+            lr.positionCount = linePositions.Length;
             lr.SetPositions(linePositions);
         }
         else if (wasDrawing && !shouldDraw)
@@ -76,6 +70,61 @@ public class BezierPathLine : MonoBehaviour
         }
 
         wasDrawing = shouldDraw;
+    }
+
+    void UpdateLookedAtObject()
+    {
+        if (playerController == null) return;
+
+        // Use the same raycast settings as the player controller
+        Ray ray = new Ray(playerController.PlayerCamera.position, playerController.PlayerCamera.forward);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, playerController.Interactrange, playerController.Interact))
+        {
+            ObjectweightManager objScript = hit.collider.GetComponent<ObjectweightManager>();
+            if (objScript != null)
+                lookedAtObjectTransform = hit.collider.transform;
+            else
+                lookedAtObjectTransform = null;
+        }
+        else
+        {
+            lookedAtObjectTransform = null;
+        }
+    }
+
+    void UpdateHeldObjectReference()
+    {
+        if (playerController != null && playerController.heldObject != null)
+        {
+            heldObjectTransform = playerController.heldObject.transform;
+        }
+        else
+        {
+            heldObjectTransform = null;
+        }
+    }
+
+    bool ShouldDrawLine()
+    {
+        if (point1 == null || point2 == null) return false;
+
+        // If carrying a normal object — draw to held object
+        if (heldObjectTransform != null)
+        {
+            point3 = heldObjectTransform;
+            return true;
+        }
+
+        // If looking at any object (normal or heavy) — draw to it
+        if (lookedAtObjectTransform != null)
+        {
+            point3 = lookedAtObjectTransform;
+            return true;
+        }
+
+        return false;
     }
 
     void CalculateLine()
@@ -89,33 +138,6 @@ public class BezierPathLine : MonoBehaviour
             float t = i / (float)resolution;
             linePositions[i] = Bezier(t, p0, p1, p2);
         }
-    }
-
-    void UpdateHeldObjectReference()
-    {
-        if (playerController != null && playerController.heldObject != null)
-        {
-            heldObjectTransform = playerController.heldObject.transform;
-            if (point3 == null && medianPoint != null)
-                point3 = medianPoint;
-        }
-        else
-        {
-            heldObjectTransform = null;
-        }
-    }
-
-    bool ShouldDrawLine()
-    {
-        if (point1 == null || point2 == null) return false;
-
-        if (heldObjectTransform != null)
-        {
-            point3 = heldObjectTransform;
-            return true;
-        }
-
-        return point3 != null;
     }
 
     Vector3 Bezier(float t, Vector3 p0, Vector3 p1, Vector3 p2)
@@ -134,12 +156,12 @@ public class BezierPathLine : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        if (point1 != null && point2 != null && (point3 != null || heldObjectTransform != null))
+        if (point1 != null && point2 != null && point3 != null)
         {
             Gizmos.color = Color.green;
             Vector3 p0 = point1.position + Vector3.up * heightOffset + Vector3.forward * frontOffset;
             Vector3 p1 = point2.position + Vector3.up * heightOffset + Vector3.forward * frontOffset;
-            Vector3 p2 = heldObjectTransform != null ? heldObjectTransform.position : point3.position;
+            Vector3 p2 = point3.position;
 
             for (int i = 0; i <= resolution; i++)
             {

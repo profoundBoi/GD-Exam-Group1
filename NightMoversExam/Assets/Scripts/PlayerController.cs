@@ -24,7 +24,7 @@ public class PlayerController3D : MonoBehaviour
     [Header("Look")]
     public float lookSensitivity = 120f;
     [SerializeField]
-    private Transform PlayerCamera;
+    public Transform PlayerCamera;
     public float minLookX = -60f;
     public float maxLookX = 60f;
     private float xRotation;
@@ -36,7 +36,7 @@ public class PlayerController3D : MonoBehaviour
     public bool IsInteracting;
 
     [SerializeField]
-    private int Interactrange;
+    public int Interactrange;
     private GameObject CurrentInteractableObject;
     public Transform HoldPosition;
     public Transform MidlePoint;
