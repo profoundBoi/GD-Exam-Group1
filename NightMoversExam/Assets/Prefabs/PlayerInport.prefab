@@ -3725,7 +3725,7 @@ PrefabInstance:
       objectReference: {fileID: 7294320768850612738}
     - target: {fileID: 8738487959405839610, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: Interactrange
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8738487959405839610, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: OpenTabletAudio
@@ -4091,7 +4091,7 @@ PrefabInstance:
       objectReference: {fileID: 2905183464345263342}
     - target: {fileID: 8738487959405839610, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: Interactrange
-      value: 15
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8738487959405839610, guid: 75de2dcdc4956934dadce28a0313088b, type: 3}
       propertyPath: OpenTabletAudio
