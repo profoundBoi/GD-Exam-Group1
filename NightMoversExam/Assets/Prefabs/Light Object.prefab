@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6749853777867110643}
   - component: {fileID: 3890299335368912405}
   - component: {fileID: 5826402293330363841}
-  - component: {fileID: 4986814504804083002}
   - component: {fileID: 7790799549431647015}
   m_Layer: 3
   m_Name: Light Object
@@ -173,33 +172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2904f43b4e85c814b9e3975b3da825f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProximityUI
-  isHeavy: 0
   detectionRadius: 20
   playerTag: Player
   uiCanvas: {fileID: 5032533714246446696}
-  lightIcon: {fileID: 4695414232171748568}
-  heavyIcon1: {fileID: 0}
-  heavyIcon2: {fileID: 0}
---- !u!114 &4986814504804083002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 663849109634381441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6420092e8759e9c44837c09df75e1323, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CarryUIChanger
-  playerTag: Player
-  isHeavy: 0
-  lightIdleImage: {fileID: 4695414232171748568}
-  lightCarryImage: {fileID: 0}
-  heavy1IdleImage: {fileID: 0}
-  heavy1CarryImage: {fileID: 0}
-  heavy2IdleImage: {fileID: 0}
-  heavy2CarryImage: {fileID: 0}
 --- !u!114 &7790799549431647015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,11 +440,6 @@ PrefabInstance:
       addedObject: {fileID: 7029851986811145863}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04a893b05132ba941a5b02866f3b44a3, type: 3}
---- !u!1 &4695414232171748568 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8150418694474418785, guid: 04a893b05132ba941a5b02866f3b44a3, type: 3}
-  m_PrefabInstance: {fileID: 3473802273622120121}
-  m_PrefabAsset: {fileID: 0}
 --- !u!223 &5032533714246446696 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 8494433746544949457, guid: 04a893b05132ba941a5b02866f3b44a3, type: 3}

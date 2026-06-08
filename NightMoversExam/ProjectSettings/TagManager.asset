@@ -13,6 +13,7 @@ TagManager:
   - SideTable
   - NeckLace
   - Table
+  - Chair
   layers:
   - Default
   - TransparentFX
