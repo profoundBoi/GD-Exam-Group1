@@ -18,6 +18,11 @@ TagManager:
   - Safe
   - Book
   - PictureFrame
+  - Box1
+  - Box2
+  - Box3
+  - Friezer
+  - BedFrame
   layers:
   - Default
   - TransparentFX
