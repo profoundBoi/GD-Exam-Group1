@@ -16104,6 +16104,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
+      propertyPath: ListNumber
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428940651312042302, guid: 0a43f4c68797e3549bfeae42b9993b40, type: 3}
       propertyPath: eventSystem
       value: 
       objectReference: {fileID: 983710456}

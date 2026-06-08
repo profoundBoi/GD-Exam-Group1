@@ -18,7 +18,7 @@ public class GameFinishManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI missionText;
     [SerializeField]
-    private int textindex;
+    private int textindex, ListNumber;
 
     public EventSystem eventSystem;
     [SerializeField]
@@ -54,11 +54,11 @@ public class GameFinishManager : MonoBehaviour
 
     public void NextText()
     {
-        if (textindex < 3)
+        if (textindex < ListNumber)
         {
             textindex++;
         }
-        else if (textindex == 3)
+        else if (textindex == ListNumber)
         {
             SceneManager.LoadScene(SceneToLoad);
         }
