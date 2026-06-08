@@ -249,7 +249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &287222269
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -525,7 +525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1816344284741029091, guid: b8a6d746ac22ead4c89450fa0f5f19a2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5532537692219801756, guid: b8a6d746ac22ead4c89450fa0f5f19a2, type: 3}
       propertyPath: m_IsActive
@@ -594,7 +594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 808798266523236873, guid: ad5c3779b91313d45a5469ed9aae9402, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3017353382750559891, guid: ad5c3779b91313d45a5469ed9aae9402, type: 3}
       propertyPath: m_LocalPosition.x
@@ -658,7 +658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &615711611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,7 +934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2ae92576f32f94b438315bf4e8591c2f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2898394801674235841, guid: 2ae92576f32f94b438315bf4e8591c2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1198,7 +1198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 663849109634381441, guid: 1ec265a08253df440b461bc52875e93d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 663849109634381441, guid: 1ec265a08253df440b461bc52875e93d, type: 3}
       propertyPath: m_TagString
@@ -1265,7 +1265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1623637120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1352,7 +1352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 96008815d53cf944797bc6499f0c1acb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1404,6 +1404,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoneyManager
   totalMoney: 1000
+  Player1Slider: {fileID: 0}
+  Player2Slider: {fileID: 0}
+  player1MoneySlider: {fileID: 0}
+  player2MoneySlider: {fileID: 0}
   moneyText: {fileID: 1281719367}
 --- !u!1 &2007379937
 GameObject:
@@ -1538,7 +1542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8343074424933156860, guid: 965c0e75402446a4394e5740798c1d84, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1640,7 +1644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1466417620661319287, guid: 7a6ad84ee7f2b6a46940607876f8c502, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2129147915372157769, guid: 7a6ad84ee7f2b6a46940607876f8c502, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
