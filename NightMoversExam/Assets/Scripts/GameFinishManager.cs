@@ -26,6 +26,7 @@ public class GameFinishManager : MonoBehaviour
     private bool canCheck;
     [SerializeField]
     private string SceneToLoad;
+    public GameObject Phone;
 
     private void Update()
     {
@@ -49,7 +50,16 @@ public class GameFinishManager : MonoBehaviour
             }
         }
 
-        missionText.text = missionTexts[textindex].ToString();
+        if (textindex == 0)
+        {
+            Phone.SetActive(true);
+        }
+        else
+        {
+            Phone.SetActive(false);
+        }
+
+            missionText.text = missionTexts[textindex].ToString();
     }
 
     public void NextText()
